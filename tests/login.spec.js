@@ -1,17 +1,21 @@
 import { test, expect } from '@playwright/test';
 import LoginPage from '../pages/LoginPage';
 
-test('Valid Login', async ({ page }) => {
+test.describe('Login Tests', () => {
 
-    const loginPage = new LoginPage(page);
+    test('Verify user can login with valid credentials', async ({ page }) => {
 
-    await page.goto('https://www.saucedemo.com/');
+        const loginPage = new LoginPage(page);
 
-    await loginPage.login(
-        'standard_user',
-        'secret_sauce'
-    );
+        await page.goto('https://www.saucedemo.com');
 
-    await expect(page).toHaveURL(/inventory/);
+        await loginPage.login(
+            'standard_user',
+            'secret_sauce'
+        );
+
+        await expect(page).toHaveURL(/inventory/);
+
+    });
 
 });
