@@ -5,28 +5,49 @@ export default class InventoryPage extends BasePage {
     constructor(page) {
         super(page);
 
+        // ==========================
         // Product Buttons
+        // ==========================
+
         this.backpack = '#add-to-cart-sauce-labs-backpack';
         this.bikeLight = '#add-to-cart-sauce-labs-bike-light';
 
+        // ==========================
         // Remove Buttons
+        // ==========================
+
         this.removeBackpack = '#remove-sauce-labs-backpack';
         this.removeBikeLight = '#remove-sauce-labs-bike-light';
 
+        // ==========================
         // Shopping Cart
+        // ==========================
+
         this.cartIcon = '.shopping_cart_link';
         this.cartBadge = '.shopping_cart_badge';
 
+        // ==========================
         // Product Sorting
+        // ==========================
+
         this.sortDropdown = '.product_sort_container';
 
+        // ==========================
         // Inventory
+        // ==========================
+
         this.inventoryItems = '.inventory_item';
 
+        // ==========================
         // Product Prices
+        // ==========================
+
         this.productPrices = '.inventory_item_price';
 
+        // ==========================
         // Product Names
+        // ==========================
+
         this.productNames = '.inventory_item_name';
     }
 
@@ -55,7 +76,7 @@ export default class InventoryPage extends BasePage {
     }
 
     // ==========================
-    // Cart
+    // Shopping Cart
     // ==========================
 
     async openCart() {
@@ -64,6 +85,10 @@ export default class InventoryPage extends BasePage {
 
     async getCartBadgeCount() {
         return await this.getText(this.cartBadge);
+    }
+
+    getCartBadgeLocator() {
+        return this.page.locator(this.cartBadge);
     }
 
     // ==========================
@@ -114,7 +139,6 @@ export default class InventoryPage extends BasePage {
     // ==========================
 
     async getAllProductNames() {
-
         return await this.page
             .locator(this.productNames)
             .allTextContents();
