@@ -81,7 +81,7 @@ test.describe('End To End Tests', () => {
         await expect(page).toHaveURL('https://www.saucedemo.com/');
 
         await expect(
-            loginPage.getLoginButton()
+           page.locator('#login-button')
         ).toBeVisible();
 
     });
