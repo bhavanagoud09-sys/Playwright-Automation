@@ -264,17 +264,16 @@ Example:
 
 # Author
 
-**Umesh Goud**
+**Bhavana G**
 
-Senior Manager – Quality Controller
+QA Analyst with experience in Manual Testing of Oracle Retail applications, including Oracle Retail Merchandising Foundation Cloud Service (MFCS), Oracle Retail Order Management System (OMS), Oracle Retail Order Broker (OB), Salesforce Commerce Cloud (SFCC), and Oracle Retail Sales Audit (ReSA). Experienced in end-to-end business process validation and integration testing across retail modules.
 
-Learning Playwright Automation using JavaScript.
+This repository showcases my Playwright Automation project built using JavaScript and the Page Object Model (POM), demonstrating my practical skills in UI test automation.
+
+Currently upskilling in Playwright Automation and seeking opportunities to transition into QA Automation roles.
 
 GitHub:
-
 https://github.com/bhavanagoud09-sys
-
----
 
 # License
 
